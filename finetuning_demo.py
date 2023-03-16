@@ -35,11 +35,12 @@ with open("finetune_info.json", "w") as outfile:
 
 
 # res = openai.FineTune.list_events(id="ft-wTWWM7ikIHcbeue7QrqvG780")
+res = openai.FineTune.list_events(id="ft-kF14mQsWGkU4qRwDSsZL1Wr0")
 
-# # res = openai.Model.retrieve("gpt-3.5-turbo")
+# res = openai.Model.retrieve("gpt-3.5-turbo")
 
-# json_object = json.dumps(res, indent=4)
+json_object = json.dumps(res, indent=4)
  
-# # Writing to sample.json
-# with open("finetune_events.json", "w") as outfile:
-#     outfile.write(json_object)
+# Writing to sample.json
+with open("finetune_events.json", "w") as outfile:
+    outfile.write(json_object)

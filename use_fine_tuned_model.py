@@ -9,18 +9,19 @@ load_dotenv() # Add
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
 completion = openai.Completion.create(
-  model="curie:ft-personal-2023-03-15-03-15-09",
+  # model="curie:ft-personal-2023-03-15-03-15-09",
+  model="davinci:ft-personal-2023-03-15-09-11-14",
   max_tokens=100,
   stop=[".\n"],
-  temperature=0.2,
+  temperature=1,
   # prompt="How can a working station operate again?"
   # "text": " 9Were the harvesters concentrated into the factory first and how do they get"
   # prompt="How to jump to the specified work station?"
   # "text": "\n\nYou can set a jump prompt on the Startup tab of a workstation"
   # prompt="Where can I see the use record of spare parts?"
   # "text": " (Article 29)\n\nhttp://www.waju.or."
-  prompt="?\nAgent: Where can I see the use record of spare parts?"
-  
+  # prompt="Where can I see the use record of spare parts?\nAgent: "
+  prompt="How to jump to the specified work station?\nAgent:"
 )
 
 
